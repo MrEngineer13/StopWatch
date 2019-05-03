@@ -1,7 +1,6 @@
-package com.mrengineer13.timer
+package com.mrengineer13.stopwatch
 
 import androidx.lifecycle.ViewModel
-
 
 class TimerViewModel() : ViewModel() {
 

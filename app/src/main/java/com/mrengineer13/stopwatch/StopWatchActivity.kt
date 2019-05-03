@@ -1,4 +1,4 @@
-package com.mrengineer13
+package com.mrengineer13.stopwatch
 
 
 import android.os.Bundle
@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.mrengineer13.interview.R
-import com.mrengineer13.timer.TimerViewModel
 import kotlinx.android.synthetic.main.activity_stop_watch.*
 
 
@@ -40,11 +39,15 @@ class StopWatchActivity : AppCompatActivity() {
             if (timerModel.isFirstStart()) {
                 btn_time_control.text = getString(R.string.pause)
                 timerModel.setRunning()
-                timeHandler.postDelayed(timeRunnable, MILLIS_IN_SECONDS)
+                timeHandler.postDelayed(timeRunnable,
+                    MILLIS_IN_SECONDS
+                )
             } else if (timerModel.isPaused()){
                 btn_time_control.text = getString(R.string.pause)
                 timerModel.setRunning()
-                timeHandler.postDelayed(timeRunnable, MILLIS_IN_SECONDS)
+                timeHandler.postDelayed(timeRunnable,
+                    MILLIS_IN_SECONDS
+                )
             } else {
                 btn_time_control.text = getString(R.string.resume)
                 timerModel.setStopped()
